@@ -39,6 +39,8 @@
 //    Creating counter instace is considered the same as Increment has been called.
 //  * Decrement must never be called without prior Increment.
 //  * Overflowing the counter will lead to undefined behaviour.
+//
+// Inspired by: https://youtu.be/kPh8pod0-gk?si=tcf5K-jL9J0WF6mT
 class StickyCounter
 {
   // Two MSBs are used to control the stickyness.
