@@ -73,7 +73,7 @@ public:
       uint64_t v = 0;
       if (counter_.compare_exchange_strong(v, is_zero))
         return true;
-      else if ((v | help) && counter_.compare_exchange_strong(v, is_zero))
+      else if ((v | help) && counter_.exchange(is_zero) | help)
         return true;
     }
     return false;
